@@ -7,22 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0862EAF929C8EC6C0038CBBB /* tol_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0862EAF829C8EC6C0038CBBB /* tol_appApp.swift */; };
+		0862EAF929C8EC6C0038CBBB /* tol_app.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0862EAF829C8EC6C0038CBBB /* tol_app.swift */; };
 		0862EAFB29C8EC6C0038CBBB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0862EAFA29C8EC6C0038CBBB /* ContentView.swift */; };
 		0862EAFD29C8EC740038CBBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0862EAFC29C8EC740038CBBB /* Assets.xcassets */; };
 		0862EB0029C8EC740038CBBB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0862EAFF29C8EC740038CBBB /* Preview Assets.xcassets */; };
 		0862EB0229C8EC750038CBBB /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0862EB0129C8EC750038CBBB /* Persistence.swift */; };
 		0862EB0529C8EC750038CBBB /* tol_app.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0862EB0329C8EC750038CBBB /* tol_app.xcdatamodeld */; };
+		0862EB0C29C8F0870038CBBB /* AppEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0862EB0B29C8F0870038CBBB /* AppEntry.swift */; };
+		0862EB0E29C8F0C40038CBBB /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0862EB0D29C8F0C40038CBBB /* JournalView.swift */; };
+		0862EB1029C8F1300038CBBB /* AudioManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0862EB0F29C8F1300038CBBB /* AudioManagement.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0862EAF529C8EC6C0038CBBB /* tol-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tol-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0862EAF829C8EC6C0038CBBB /* tol_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tol_appApp.swift; sourceTree = "<group>"; };
+		0862EAF829C8EC6C0038CBBB /* tol_app.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tol_app.swift; sourceTree = "<group>"; };
 		0862EAFA29C8EC6C0038CBBB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0862EAFC29C8EC740038CBBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0862EAFF29C8EC740038CBBB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0862EB0129C8EC750038CBBB /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		0862EB0429C8EC750038CBBB /* tol_app.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = tol_app.xcdatamodel; sourceTree = "<group>"; };
+		0862EB0B29C8F0870038CBBB /* AppEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEntry.swift; sourceTree = "<group>"; };
+		0862EB0D29C8F0C40038CBBB /* JournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalView.swift; sourceTree = "<group>"; };
+		0862EB0F29C8F1300038CBBB /* AudioManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManagement.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +61,9 @@
 		0862EAF729C8EC6C0038CBBB /* tol-app */ = {
 			isa = PBXGroup;
 			children = (
-				0862EAF829C8EC6C0038CBBB /* tol_appApp.swift */,
+				0862EB0B29C8F0870038CBBB /* AppEntry.swift */,
+				0862EB1129C8F1360038CBBB /* JournalPage */,
+				0862EAF829C8EC6C0038CBBB /* tol_app.swift */,
 				0862EAFA29C8EC6C0038CBBB /* ContentView.swift */,
 				0862EAFC29C8EC740038CBBB /* Assets.xcassets */,
 				0862EB0129C8EC750038CBBB /* Persistence.swift */,
@@ -71,6 +79,15 @@
 				0862EAFF29C8EC740038CBBB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0862EB1129C8F1360038CBBB /* JournalPage */ = {
+			isa = PBXGroup;
+			children = (
+				0862EB0D29C8F0C40038CBBB /* JournalView.swift */,
+				0862EB0F29C8F1300038CBBB /* AudioManagement.swift */,
+			);
+			path = JournalPage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,10 +160,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0862EB0E29C8F0C40038CBBB /* JournalView.swift in Sources */,
 				0862EB0229C8EC750038CBBB /* Persistence.swift in Sources */,
 				0862EAFB29C8EC6C0038CBBB /* ContentView.swift in Sources */,
-				0862EAF929C8EC6C0038CBBB /* tol_appApp.swift in Sources */,
+				0862EB0C29C8F0870038CBBB /* AppEntry.swift in Sources */,
+				0862EAF929C8EC6C0038CBBB /* tol_app.swift in Sources */,
 				0862EB0529C8EC750038CBBB /* tol_app.xcdatamodeld in Sources */,
+				0862EB1029C8F1300038CBBB /* AudioManagement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
