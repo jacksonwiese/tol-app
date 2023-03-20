@@ -9,12 +9,30 @@ import SwiftUI
 
 struct JournalView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack{
+            Color("darkBackgroundColor")
+                .ignoresSafeArea()
+            VStack{
+                Text("Tol")
+                    .font(.largeTitle)
+                    .foregroundColor(Color.white)
+                    
+                Spacer()
+                ZStack{
+                    Circle()
+                    
+                    Image("music.mic")
+                        .resizable()
+                    
+                    
+                }
+            }
+        }
     }
-}
-
-struct JournalView_Previews: PreviewProvider {
-    static var previews: some View {
-        JournalView()
+    
+    struct JournalView_Previews: PreviewProvider {
+        static var previews: some View {
+            JournalView()
+        }
     }
 }
