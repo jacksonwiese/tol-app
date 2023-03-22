@@ -24,7 +24,7 @@ struct JournalView: View {
                     Image("music.mic")
                         .resizable()
                     
-                    
+                    //leave a commit
                 }
             }
         }
