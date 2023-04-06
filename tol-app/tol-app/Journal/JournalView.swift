@@ -8,20 +8,25 @@
 import SwiftUI
 
 struct JournalView: View {
-    
-    
-    
     var body: some View {
+        
         ZStack{
-            Color("darkBackgroundColor")
+            Color("DarkBackgroundColor")
                 .ignoresSafeArea()
-            
-            
-            
             VStack{
-                Text("Tol")
-                    .font(.largeTitle)
-                    .foregroundColor(Color.white)
+                    
+                    
+                    Image("calendar")
+                    Text("Tol")
+                        .font(.journalNameEntry)
+                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                        .foregroundColor(Color.white)
+                
+                
+                
+                Spacer()
+                
+                
                 
                 Spacer()
                 
@@ -39,8 +44,8 @@ struct JournalView: View {
                     
                     
                 } //end of HStack
-            } //End of VStack
-        }
+            } //end of VStack
+        }//end of ZStack
     }
     
     struct JournalView_Previews: PreviewProvider {

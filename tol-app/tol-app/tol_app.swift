@@ -13,10 +13,8 @@ struct tol_app: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CoreDataSwift()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
-            
-            
         }
     }
 }

@@ -9,7 +9,17 @@ import SwiftUI
 
 struct CalendarView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack{
+            Color("DarkBackgroundColor")
+                .ignoresSafeArea()
+            
+            Text("Tol")
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Image("calendar")
+                    }
+                }//end of text
+        }
     }
 }
 

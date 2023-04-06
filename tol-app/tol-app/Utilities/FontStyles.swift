@@ -108,3 +108,15 @@ extension Font {
         return Font.custom("Inter-Light", size: 44)
     }
 }
+
+
+//Tool to view font family names in termianal (put this in a content view swift)
+//
+//init() {
+//    for fontFamily in UIFont.familyNames {
+//        for font in UIFont.fontNames(forFamilyName: fontFamily) {
+//            print("-- \(font)")
+//        }
+//
+//    }
+//}
