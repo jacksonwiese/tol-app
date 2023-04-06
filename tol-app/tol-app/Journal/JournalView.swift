@@ -8,25 +8,38 @@
 import SwiftUI
 
 struct JournalView: View {
+    
+    
+    
     var body: some View {
         ZStack{
             Color("darkBackgroundColor")
                 .ignoresSafeArea()
+            
+            
+            
             VStack{
                 Text("Tol")
                     .font(.largeTitle)
                     .foregroundColor(Color.white)
-                    
+                
                 Spacer()
-                ZStack{
-                    Circle()
+                
+                HStack{
                     
-                    Image("music.mic")
-                        .resizable()
+                    Button("Start") {
+                        
+                    }
+                    Button("Pause") {
+                        
+                    }
+                    Button("Stop") {
+                        
+                    }
                     
-                    //leave a commit
-                }
-            }
+                    
+                } //end of HStack
+            } //End of VStack
         }
     }
     

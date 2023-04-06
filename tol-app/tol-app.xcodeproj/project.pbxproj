@@ -16,6 +16,12 @@
 		0862EB0C29C8F0870038CBBB /* AppEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0862EB0B29C8F0870038CBBB /* AppEntry.swift */; };
 		0862EB0E29C8F0C40038CBBB /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0862EB0D29C8F0C40038CBBB /* JournalView.swift */; };
 		0862EB1029C8F1300038CBBB /* AudioManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0862EB0F29C8F1300038CBBB /* AudioManagement.swift */; };
+		0886B0C529DE272D001A690E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0886B0C429DE272D001A690E /* AVFoundation.framework */; };
+		0886B0C729DE2850001A690E /* AudioControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0886B0C629DE2850001A690E /* AudioControls.swift */; };
+		0886B0C929DE2941001A690E /* AudioTranscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0886B0C829DE2941001A690E /* AudioTranscription.swift */; };
+		0886B0CB29DE2C94001A690E /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0886B0CA29DE2C94001A690E /* CalendarView.swift */; };
+		0886B0CF29DE2D1A001A690E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0886B0CE29DE2D1A001A690E /* SettingsView.swift */; };
+		0886B0D329DE3630001A690E /* FontStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0886B0D229DE3630001A690E /* FontStyles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +35,13 @@
 		0862EB0B29C8F0870038CBBB /* AppEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEntry.swift; sourceTree = "<group>"; };
 		0862EB0D29C8F0C40038CBBB /* JournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalView.swift; sourceTree = "<group>"; };
 		0862EB0F29C8F1300038CBBB /* AudioManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManagement.swift; sourceTree = "<group>"; };
+		0886B0C429DE272D001A690E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		0886B0C629DE2850001A690E /* AudioControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioControls.swift; sourceTree = "<group>"; };
+		0886B0C829DE2941001A690E /* AudioTranscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioTranscription.swift; sourceTree = "<group>"; };
+		0886B0CA29DE2C94001A690E /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		0886B0CE29DE2D1A001A690E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		0886B0D129DE34F7001A690E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		0886B0D229DE3630001A690E /* FontStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0886B0C529DE272D001A690E /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +61,7 @@
 			children = (
 				0862EAF729C8EC6C0038CBBB /* tol-app */,
 				0862EAF629C8EC6C0038CBBB /* Products */,
+				0886B0C329DE272C001A690E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,10 +76,14 @@
 		0862EAF729C8EC6C0038CBBB /* tol-app */ = {
 			isa = PBXGroup;
 			children = (
+				0886B0D129DE34F7001A690E /* Info.plist */,
 				0862EB0B29C8F0870038CBBB /* AppEntry.swift */,
-				0862EB1129C8F1360038CBBB /* JournalPage */,
-				0862EAF829C8EC6C0038CBBB /* tol_app.swift */,
+				0886B0D429DE3635001A690E /* Utilities */,
 				0862EAFA29C8EC6C0038CBBB /* ContentView.swift */,
+				0886B0CD29DE2CD1001A690E /* Settings */,
+				0886B0CC29DE2C99001A690E /* Calendar */,
+				0862EB1129C8F1360038CBBB /* Journal */,
+				0862EAF829C8EC6C0038CBBB /* tol_app.swift */,
 				0862EAFC29C8EC740038CBBB /* Assets.xcassets */,
 				0862EB0129C8EC750038CBBB /* Persistence.swift */,
 				0862EB0329C8EC750038CBBB /* tol_app.xcdatamodeld */,
@@ -81,13 +100,47 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		0862EB1129C8F1360038CBBB /* JournalPage */ = {
+		0862EB1129C8F1360038CBBB /* Journal */ = {
 			isa = PBXGroup;
 			children = (
 				0862EB0D29C8F0C40038CBBB /* JournalView.swift */,
 				0862EB0F29C8F1300038CBBB /* AudioManagement.swift */,
+				0886B0C829DE2941001A690E /* AudioTranscription.swift */,
+				0886B0C629DE2850001A690E /* AudioControls.swift */,
 			);
-			path = JournalPage;
+			path = Journal;
+			sourceTree = "<group>";
+		};
+		0886B0C329DE272C001A690E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0886B0C429DE272D001A690E /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0886B0CC29DE2C99001A690E /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				0886B0CA29DE2C94001A690E /* CalendarView.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		0886B0CD29DE2CD1001A690E /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				0886B0CE29DE2D1A001A690E /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		0886B0D429DE3635001A690E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				0886B0D229DE3630001A690E /* FontStyles.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,13 +213,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0886B0CB29DE2C94001A690E /* CalendarView.swift in Sources */,
 				0862EB0E29C8F0C40038CBBB /* JournalView.swift in Sources */,
+				0886B0D329DE3630001A690E /* FontStyles.swift in Sources */,
 				0862EB0229C8EC750038CBBB /* Persistence.swift in Sources */,
 				0862EAFB29C8EC6C0038CBBB /* ContentView.swift in Sources */,
 				0862EB0C29C8F0870038CBBB /* AppEntry.swift in Sources */,
+				0886B0C729DE2850001A690E /* AudioControls.swift in Sources */,
 				0862EAF929C8EC6C0038CBBB /* tol_app.swift in Sources */,
 				0862EB0529C8EC750038CBBB /* tol_app.xcdatamodeld in Sources */,
 				0862EB1029C8F1300038CBBB /* AudioManagement.swift in Sources */,
+				0886B0C929DE2941001A690E /* AudioTranscription.swift in Sources */,
+				0886B0CF29DE2D1A001A690E /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +355,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"tol-app/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "tol-app/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -325,6 +384,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"tol-app/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "tol-app/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
